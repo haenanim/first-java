@@ -3,6 +3,7 @@ package sample;
 /**
  * first java program
  * HelloWorld!!
+ * number dot program
  */
 public class Hello {
   public static void main(String[] args) {

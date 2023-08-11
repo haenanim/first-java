@@ -9,7 +9,7 @@ public class Phone {
   public Phone(String model, int value) {
     this.model = model;
     this.value = value;
-    numOfPhones++;
+//    numOfPhones++;
   }
 
   public String model;

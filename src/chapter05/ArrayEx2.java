@@ -18,11 +18,10 @@ public class ArrayEx2 {
     int[] score = {0,0,0,0,0};
     int sum = 0;
     for(int i = 0; i < 5; ++i) {
-      int inputNum = in.nextInt();
-      score[i] = inputNum;
-      sum += inputNum;
+      score[i] = in.nextInt();
+      sum += score[i];
     }
     System.out.println("총점 : " + sum);
-    System.out.println("평균 : " + ((double)sum)/score.length);
+    System.out.println("평균 : " + ((float)sum)/score.length);
   }
 }

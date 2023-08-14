@@ -17,7 +17,9 @@ public class Circle {
   }
 
   public void showStatus() {
-    System.out.println(this.radius + this.color);
+    System.out.println("원의 반지름 : "+this.radius + "\n색 : " + this.color);
   }
+  public void setRadius(double r) { this.radius = r;}
+  public double getRadius() { return this.radius;}
 
 }

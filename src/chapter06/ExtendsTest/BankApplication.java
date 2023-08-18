@@ -12,7 +12,6 @@ public class BankApplication {
         """);
 
     Scanner in = new Scanner(System.in);
-    Account selectAcc = null;
     String commend = in.nextLine();
     if(commend.equals("1")){
       addAccount();
@@ -24,20 +23,9 @@ public class BankApplication {
         System.out.println(acc.getAccountNum()+"  "+acc.getAccountName()+"   "+acc.getBalance());
       }
     }else if (commend.equals(("3"))) {
-      System.out.println("계좌번호 :");
-      String findAcc = in.nextLine();
-      selectAcc = selectAccount(findAcc);
-
-      System.out.println("예금액 :");
-      selectAcc.deposit(in.nextInt());
+      deposit();
     }else if (commend.equals(("4"))) {
-      System.out.println("계좌번호 :");
-      String findAcc = in.nextLine();
-      selectAcc = selectAccount(findAcc);
-
-      System.out.println("출금액 :");
-      selectAcc.withdraw(in.nextInt());
-
+      withdraw();
     }else if (commend.equals("5")) {
       return false;
     }
@@ -71,6 +59,29 @@ public class BankApplication {
       }
     }
     return null;
+  }
+  void deposit() {
+    Account selectAcc = null;
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("계좌번호 :");
+    String findAcc = in.nextLine();
+    selectAcc = selectAccount(findAcc);
+
+    System.out.println("예금액 :");
+    selectAcc.deposit(in.nextInt());
+  }
+  void withdraw() {
+    Account selectAcc = null;
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("계좌번호 :");
+    String findAcc = in.nextLine();
+    selectAcc = selectAccount(findAcc);
+
+    System.out.println("출금액 :");
+    selectAcc.withdraw(in.nextInt());
+
   }
 
 

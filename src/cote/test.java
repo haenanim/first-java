@@ -5,21 +5,21 @@ public class test {
     String code = "abc1abc1abc";
     boolean mode = false;
     String answer = "";
-    for(int i = 0; i < code.length();++i) {
-      if(!mode) {
-        if('1' == code.charAt(i)) {
+    for (int i = 0; i < code.length(); ++i) {
+      if (!mode) {
+        if ('1' == code.charAt(i)) {
           mode = true;
           continue;
         }
-        if(i % 2 == 0){
+        if (i % 2 == 0) {
           answer += code.charAt(i);
         }
       } else {
-        if('1' == code.charAt(i)) {
+        if ('1' == code.charAt(i)) {
           mode = false;
           continue;
         }
-        if(i % 2 == 1){
+        if (i % 2 == 1) {
           answer += code.charAt(i);
         }
       }
